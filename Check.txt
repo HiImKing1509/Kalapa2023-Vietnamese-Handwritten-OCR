@@ -1,0 +1,11 @@
+Card 1: Pretrain efficient net (kiet_card1)
+python train.py --root data --train train --val test --alphabet char --imgW 2713 --imgH 64 --pretrain expr/efficientnet-b0.pth --expr_dir expr --cuda --gpu 1
+
+Card 2: Pretrain netCRNN (kiet_card2)
+python train.py --root data --train train --val test --alphabet char --imgW 2713 --imgH 64 --pretrain expr/netCRNN_100.pth --expr_dir expr --cuda --gpu 2
+
+Card 3: No pretrain model (kiet_card3)
+python train.py --root data --train train --val test --alphabet char --imgW 2713 --imgH 64 --expr_dir expr --cuda --gpu 3
+
+Card 4: Pretrain vgg_seq2seq (kiet_card4)
+python private_train.py --root data --train train --val test --alphabet char --imgW 2713 --imgH 64 --pretrain expr/vgg_seq2seq.pth --expr_dir expr --cuda --gpu 4
